@@ -1,5 +1,5 @@
 'use strict';
-
+//Erik Enderlein helped with .toLowerCase placement
 //declaring variable to use in answer field rather than strings
 var answerYes = 'yes';
 var answerY = 'y';
