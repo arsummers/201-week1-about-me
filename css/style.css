@@ -1,4 +1,33 @@
-/*how do I make it pretty?*/
-li{
-    color:red;
-};
+body{
+    background-color: blueviolet;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    color:rgb(31, 212, 14);
+}
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+ul{
+    background-color: aqua;
+}
+/*links to question about food*/
+#food{
+    color:#467534;
+    font-size: 20px;
+}
+s
+/*links to questions about animals*/
+.animal{
+    color: rgb(0, 212, 250);
+    font-size: 30px;
+}
+
+/*links to questions about places*/
+.place{
+    color: rgb(20, 100, 200);
+    font-size: 30px;
+}
