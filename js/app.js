@@ -6,17 +6,27 @@ var answerNo = ['no', 'NO', 'n', 'N', 'nope'];
 
 //prompt for question 1 of 5 y/n Qs
 //options for Yes answer
-var answer = prompt('Have I ever willingly consumed mayonnaise?');
-for(var i = 0; i <= answerYes.length; i++){
+do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
+var validAnswer = false;
+for(var i = 0; i < answerYes.length; i++){
   if (answerYes[i] === answer){
     console.log('answer: ' + answer + '. This answer is wrong');
     alert('You are wrong');
-  }else{
+  } else if (answerNo[i]) === answer {
   //I have this log here so that if someone (most likely me) decides to
   //keyboard-smash/other invalid input, I can still see what they wrote
+  //if answer is no[i] = response for answer. The else below could be put somewhere better
+  //Can delete the else
+  validAnswer = true;
     console.log(answer);
   }
 }
+If (!validAnswer) {
+  console.log(answer);
+  alert('Answer better')
+}
+} while (!validAnswer);
+
 
 //options for No answer
 for(i = 0; i <= answerNo.length; i++){
@@ -108,23 +118,25 @@ for(i = 0; i <= answerNo.length; i++){
 
 //Pick a number question. I have picked 9
 
-var pickNumber = [9, 9, 9, 9];
+//var pickNumber = [9, 9, 9, 9];
+var pickNumber = 9;
+var guesses = 4;
 var pickNumberAnswer = prompt('See if you can guess the number I\'m thinking of. It is between 1 and 15');
 /*
 This works because it iterates through the pickNumber array, which I have used to limit how many times the
 question runs.
 Note: This only works because I have set my entire array to the same numer. It is picking an different index,
 or a different 9, each time. If I were to change the numbers past index [0] to anything other than 9, the questions
-wouldn't work properly. While this works, it is far from a perfect fix.
+wouldn't work properly. While this works, it is far from a perfect fix. Could set counter variable
 */
-for(i = 0; i <= pickNumber.length; i++){
-  if (pickNumberAnswer > pickNumber[i]){
+for(i = 0; i < guesses; i++){
+  if (pickNumberAnswer > pickNumber){
     console.log(pickNumberAnswer + ' was too big');
     pickNumberAnswer = prompt('Too big');
-  }else if(pickNumberAnswer < pickNumber[i]){
+  }else if(pickNumberAnswer < pickNumber){
     console.log(pickNumberAnswer + ' was too small');
     pickNumberAnswer = prompt('Too small');
-  }else if(pickNumberAnswer == pickNumber[i]){
+  }else if(pickNumberAnswer == pickNumber){
     console.log(pickNumberAnswer + ' was correct');
     alert('Congrats you got it');
     break;
