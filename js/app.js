@@ -132,51 +132,24 @@ for(i = 0; i <= pickNumber.length; i++){
 }
 
 
-//solving 7 with similar thing to yes/no questions;
-var faveAnimals = ['bears', ' orangutans', 'dogs'];
-//var faveAnimalsAnswer = prompt('What are some my favorite animals');
-
-var faveAnimalsAnswer = prompt('What are some of my favorite animals?');
-for( i = 0; i < answerYes.length; i++){
-  if (faveAnimals[i] !== faveAnimalsAnswer){
-    console.log('answer: ' + faveAnimalsAnswer + '. This answer is wrong!');
-    alert('You are wrong');
-  }
-}
-
-for( i = 0; i < answerYes.length; i++){
-  if (faveAnimals[i] === faveAnimalsAnswer){
-    console.log('answer: ' + faveAnimalsAnswer + '. This answer is right!');
-    alert('You are right');
+/*Trying and failing to solve 7 with similar thing to yes/no questions;
+I've added dogs and bears to one of my answer arrays since it had trouble pulling from the specific
+answer arrays I gave this question. I don't currently have it set up to run through six times, because when
+I added a new alert or prompt inside the else, it runs into an infinite loops. This is the only set-up I have
+found where it disregards the placement in the array. I intend to learn how to tally after I get this section
+up and working right.
+*/
+var faveAnimal = ['dogs', 'bears', 'beeps', 'boops', 'fish', 'piggo'];
+var faveAnimalAnswer = prompt('What is one of my favorite animals?');
+for( i = 0; i <= faveAnimal.length; i++){
+  if (faveAnimal[i] === faveAnimalAnswer){
+    console.log('answer: ' + faveAnimalAnswer + '. This answer is right');
+    alert('Yes I like those');
     break;
+  }else{
+  //I have a log for invalid answers]
+    console.log(faveAnimalAnswer);
   }
 }
 
-
-
-
-
-//Question 7
-//Should be able to do a similar thing to #6
-//Question: what are some of my favorite animals?
-
-//var faveAnimals = ['bears', ' orangutans', 'dogs'];
-/*var faveAnimals =['bears', 'dogs'];
-var faveAnimalsAnswer = prompt('What are some my favorite animals');
-
-//in its current state it only accepts answers if they align with their position on the array. How fix?
-
-for(i = 0; i < faveAnimals.length; i++){
-  if (faveAnimals[i] !== faveAnimalsAnswer){
-    console.log(faveAnimalsAnswer + ' was wrong.');
-    faveAnimalsAnswer = prompt('Try again');
-  } else if(faveAnimals[i] === faveAnimalsAnswer){
-    console.log(faveAnimalsAnswer + ' was correct');
-    alert('Congrats! That is one of my favorite animals. Here is the full list of the big ones ' + faveAnimals);
-  }
-}*/
-
-//at the end, right before break, list the answers
-//comparing input at index of array. If the user input is in the array, i
-//should return true, or as long as the user put said something in the array, it will give right alert
 

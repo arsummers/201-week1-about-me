@@ -11,23 +11,33 @@ p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
 }
 
-ul{
-    background-color: aqua;
+
+
+ol{
+    background-color: lightcyan;
+    border-width: 10px;
 }
-/*links to question about food*/
-#food{
-    color:#467534;
+
+/*links to items for water pokemon*/
+.water{
+    background-color: blue;
+    color:white;
     font-size: 20px;
+    margin: 5%;
 }
 
-/*links to questions about animals*/
-.animal{
-    color: rgb(0, 212, 250);
+/*links to items for fire pokemon*/
+.fire{
+    background-color:red;
+    color: rgb(159, 193, 199);
     font-size: 30px;
+    margin: 5%;
 }
 
-/*links to questions about places*/
-.place{
+/*links to items for grass pokemon*/
+.grass{
+    background-color: greenyellow;
     color: rgb(20, 100, 200);
-    font-size: 30px;
+    font-size: 40px;
+    margin: 5%;
 }
