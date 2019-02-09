@@ -6,36 +6,25 @@ var answerNo = ['NO', 'n'];
 
 //prompt for question 1 of 5 y/n Qs
 //options for Yes answer
-do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
-  var validAnswer = false;
-  for(var i = 0; i < answerYes.length; i++){
-  //debugger;
-    if (answerYes[i] === answer){
-      console.log('answer: ' + answer + '. This answer is wrong');
-      alert('You are wrong');
-    } else if ((answerNo[i]) === answer) {
-      validAnswer = true;
-      alert('That is correct!');
-      console.log(answer);
-    }
-  }
-  // eslint-disable-next-line no-debugger
-  debugger;
-  if (!validAnswer){
-    console.log(answer);
-    alert('Answer better');
-  }
-
-} while (!validAnswer);
-
-
-// //options for No answer
-// for(i = 0; i <= answerNo.length; i++){
-//   if (answerNo[i] === answer){
-//     console.log(answer + ' was right, plus 1 pt');
-//     alert('You are right. I hate the stuff');
+// do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
+//   var validAnswer = false;
+//   for(var i = 0; i < answerYes.length; i++){
+//     if (answerYes[i] === answer){
+//       console.log('answer: ' + answer + '. This answer is wrong');
+//       alert('You are wrong');
+//     } else if ((answerNo[i]) === answer) {
+//       validAnswer = true;
+//       alert('You are right. I hate the stuff');
+//       console.log(answer + ' was right, plus 1 pt');
+//     }
 //   }
-// }
+//   // eslint-disable-next-line no-debugger
+//   if (!validAnswer){
+//     console.log(answer);
+//     alert('Answer better');
+//   }
+
+// } while (!validAnswer);
 
 // //prompt for question 2 of 5 y/n
 // answer = prompt('Was my first pet a cat?');
@@ -117,11 +106,11 @@ do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
 //   }
 // }
 
-// //Pick a number question. I have picked 9
+//Pick a number question. I have picked 9
 
-// //var pickNumber = [9, 9, 9, 9];
+
 // var pickNumber = 9;
-// var guesses = 4;
+// var guesses = 3;
 // var pickNumberAnswer = prompt('See if you can guess the number I\'m thinking of. It is between 1 and 15');
 // /*
 // This works because it iterates through the pickNumber array, which I have used to limit how many times the
@@ -152,16 +141,35 @@ do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
 // found where it disregards the placement in the array. I intend to learn how to tally after I get this section
 // up and working right.
 // */
-// var faveAnimal = ['dogs', 'bears', 'beeps', 'boops', 'fish', 'piggo'];
-// var faveAnimalAnswer = prompt('What is one of my favorite animals?');
-// for( i = 0; i <= faveAnimal.length; i++){
-//   if (faveAnimal[i] === faveAnimalAnswer){
-//     console.log('answer: ' + faveAnimalAnswer + '. This answer is right');
-//     alert('Yes I like those');
-//     break;
-//   }else{
-//   //I have a log for invalid answers]
-//     console.log(faveAnimalAnswer);
-//   }
-// }
+
+// eslint-disable-next-line no-debugger
+debugger;
+
+var faveAnimal = ['dogs', 'bears', 'cattors', 'clarence', 'fish', 'piggo'];
+var faveAnimalAnswer = prompt('What is one of my favorite animals?');
+var animalGuesses = 6;
+var validAnimals = false;
+var sportsBall = '.';
+
+do {
+  for( var j = 1; j < animalGuesses; j++){
+    if (faveAnimal[j] === faveAnimalAnswer){
+      console.log('answer: ' + faveAnimalAnswer + '. This answer is right');
+      alert('Yes I like those');
+      break;
+    }
+    // e
+    // lse( faveAnimal[j] !== faveAnimalAnswer);
+    // // // alert ('Try again, you have '+6-animalGuesses+' guesses left.');
+    // //I have a log for invalid answers]
+    // console.log(faveAnimalAnswer);
+
+  }
+}while( faveAnimal[j] !== faveAnimalAnswer);
+alert( ' Try again, you suck');
+
+
+
+
+
 
