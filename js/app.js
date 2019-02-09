@@ -1,133 +1,136 @@
 'use strict';
+/* FOR
+THE
+LOVE
+OF
+GOD
+UPDATE
+YOUR
+README*/
 //declaring variable to use in answer field rather than strings
-var answerYes = ['yes', 'YES', 'y', 'Y', 'ye', 'Yes'];
-var answerNo = ['no', 'NO', 'n', 'N', 'nope'];
+var answerYes = ['YES', 'y'];
+var answerNo = ['NO', 'n'];
 
 
 //prompt for question 1 of 5 y/n Qs
 //options for Yes answer
 do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
-var validAnswer = false;
-for(var i = 0; i < answerYes.length; i++){
-  if (answerYes[i] === answer){
-    console.log('answer: ' + answer + '. This answer is wrong');
-    alert('You are wrong');
-  } else if (answerNo[i]) === answer {
-  //I have this log here so that if someone (most likely me) decides to
-  //keyboard-smash/other invalid input, I can still see what they wrote
-  //if answer is no[i] = response for answer. The else below could be put somewhere better
-  //Can delete the else
-  validAnswer = true;
-    console.log(answer);
+  var validAnswer = false;
+  for(var i = 0; i < answerYes.length; i++){
+
+    if (answerYes[i] === answer){
+      console.log('answer: ' + answer + '. This answer is wrong');
+      alert('You are wrong');
+    } else if ((answerNo[i]) === answer) {
+      validAnswer = true;
+      alert('That is correct!');
+      console.log(answer);
+    }
   }
-}
-If (!validAnswer) {
-  console.log(answer);
-  alert('Answer better')
-}
+  // eslint-disable-next-line no-debugger
+  if (!validAnswer){
+    console.log(answer);
+    alert('Answer better');
+  }
+
 } while (!validAnswer);
 
 
-//options for No answer
-for(i = 0; i <= answerNo.length; i++){
-  if (answerNo[i] === answer){
-    console.log(answer + ' was right, plus 1 pt');
-    alert('You are right. I hate the stuff');
-  }
-}
+// //options for No answer
+// for(i = 0; i <= answerNo.length; i++){
+//   if (answerNo[i] === answer){
+//     console.log(answer + ' was right, plus 1 pt');
+//     alert('You are right. I hate the stuff');
+//   }
+// }
 
-//prompt for question 2 of 5 y/n
-answer = prompt('Was my first pet a cat?');
-for( i = 0; i <= answerYes.length; i++){
-  if (answerYes[i] === answer){
-    console.log('answer: ' + answer + '. This answer is wrong');
-    alert('You are wrong');
-  }else{
-  //I have a log for invalid answers
-    console.log(answer);
-  }
-}
+// //prompt for question 2 of 5 y/n
+// answer = prompt('Was my first pet a cat?');
+// for( i = 0; i <= answerYes.length; i++){
+//   if (answerYes[i] === answer){
+//     console.log('answer: ' + answer + '. This answer is wrong');
+//     alert('You are wrong');
+//   }else{
+//   //I have a log for invalid answers
+//     console.log(answer);
+//   }
+// }
 
-//options for No answer
-for(i = 0; i <= answerNo.length; i++){
-  if (answerNo[i] === answer){
-    console.log(answer + ' was right, plus 1 pt');
-    alert('You are right, but I think they are cute');
-  }
-}
+// //options for No answer
+// for(i = 0; i <= answerNo.length; i++){
+//   if (answerNo[i] === answer){
+//     console.log(answer + ' was right, plus 1 pt');
+//     alert('You are right, but I think they are cute');
+//   }
+// }
 
-//prompt for question 3 of 5 y/n
-answer = prompt('Do I have a collection of interesting rocks?');
-for( i = 0; i <= answerYes.length; i++){
-  if (answerYes[i] === answer){
-    console.log('answer: ' + answer + '. This answer is right');
-    alert('You are right. Rocks are cool');
-  }else{
-  //I have a log for invalid answers
-    console.log(answer);
-  }
-}
+// //prompt for question 3 of 5 y/n
+// answer = prompt('Do I have a collection of interesting rocks?');
+// for( i = 0; i <= answerYes.length; i++){
+//   if (answerYes[i] === answer){
+//     console.log('answer: ' + answer + '. This answer is right');
+//     alert('You are right. Rocks are cool');
+//   }else{
+//   //I have a log for invalid answers
+//     console.log(answer);
+//   }
+// }
 
-//options for No answer
-for(i = 0; i <= answerNo.length; i++){
-  if (answerNo[i] === answer){
-    console.log(answer + ' was right, plus 1 pt');
-    alert('You are wrong, and might need more interesting rocks');
-  }
-}
+// //options for No answer
+// for(i = 0; i <= answerNo.length; i++){
+//   if (answerNo[i] === answer){
+//     console.log(answer + ' was right, plus 1 pt');
+//     alert('You are wrong, and might need more interesting rocks');
+//   }
+// }
 
-//prompt for question 4 of 5 y/n
-answer = prompt('Have I lived on the east coast?');
-for( i = 0; i <= answerYes.length; i++){
-  if (answerYes[i] === answer){
-    console.log('answer: ' + answer + '. This answer is wrong');
-    alert('Wrong, but I have family there.');
-  }else{
-  //I have a log for invalid answers
-    console.log(answer);
-  }
-}
+// //prompt for question 4 of 5 y/n
+// answer = prompt('Have I lived on the east coast?');
+// for( i = 0; i <= answerYes.length; i++){
+//   if (answerYes[i] === answer){
+//     console.log('answer: ' + answer + '. This answer is wrong');
+//     alert('Wrong, but I have family there.');
+//   }else{
+//   //I have a log for invalid answers
+//     console.log(answer);
+//   }
+// }
 
-//options for No answer
-for(i = 0; i <= answerNo.length; i++){
-  if (answerNo[i] === answer){
-    console.log(answer + ' was right, plus 1 pt');
-    alert('You are right, but I still have family there');
-  }
-}
+// //options for No answer
+// for(i = 0; i <= answerNo.length; i++){
+//   if (answerNo[i] === answer){
+//     console.log(answer + ' was right, plus 1 pt');
+//     alert('You are right, but I still have family there');
+//   }
+// }
 
-//prompt for question 5 of 5 y/n
-answer = prompt('Have you done the reading?');
-for( i = 0; i <= answerYes.length; i++){
-  if (answerYes[i] === answer){
-    console.log('answer: ' + answer + '. goood answer');
-    alert('Congratulations on being a good student');
-  }else{
-  //I have a log for invalid answers
-    console.log(answer);
-  }
-}
+// //prompt for question 5 of 5 y/n
+// answer = prompt('Have you done the reading?');
+// for( i = 0; i <= answerYes.length; i++){
+//   if (answerYes[i] === answer){
+//     console.log('answer: ' + answer + '. goood answer');
+//     alert('Congratulations on being a good student');
+//   }else{
+//   //I have a log for invalid answers
+//     console.log(answer);
+//   }
+// }
 
-//options for No answer
-for(i = 0; i <= answerNo.length; i++){
-  if (answerNo[i] === answer){
-    console.log(answer + ' wrong');
-    alert('Well you should do the reading');
-  }
-}
+// //options for No answer
+// for(i = 0; i <= answerNo.length; i++){
+//   if (answerNo[i] === answer){
+//     console.log(answer + ' wrong');
+//     alert('Well you should do the reading');
+//   }
+// }
 
 //Pick a number question. I have picked 9
 
-//var pickNumber = [9, 9, 9, 9];
 var pickNumber = 9;
 var guesses = 4;
 var pickNumberAnswer = prompt('See if you can guess the number I\'m thinking of. It is between 1 and 15');
 /*
-This works because it iterates through the pickNumber array, which I have used to limit how many times the
-question runs.
-Note: This only works because I have set my entire array to the same numer. It is picking an different index,
-or a different 9, each time. If I were to change the numbers past index [0] to anything other than 9, the questions
-wouldn't work properly. While this works, it is far from a perfect fix. Could set counter variable
+Why does this work?
 */
 for(i = 0; i < guesses; i++){
   if (pickNumberAnswer > pickNumber){
@@ -144,24 +147,49 @@ for(i = 0; i < guesses; i++){
 }
 
 
-/*Trying and failing to solve 7 with similar thing to yes/no questions;
-I've added dogs and bears to one of my answer arrays since it had trouble pulling from the specific
-answer arrays I gave this question. I don't currently have it set up to run through six times, because when
-I added a new alert or prompt inside the else, it runs into an infinite loops. This is the only set-up I have
-found where it disregards the placement in the array. I intend to learn how to tally after I get this section
-up and working right.
-*/
-var faveAnimal = ['dogs', 'bears', 'beeps', 'boops', 'fish', 'piggo'];
-var faveAnimalAnswer = prompt('What is one of my favorite animals?');
-for( i = 0; i <= faveAnimal.length; i++){
-  if (faveAnimal[i] === faveAnimalAnswer){
-    console.log('answer: ' + faveAnimalAnswer + '. This answer is right');
-    alert('Yes I like those');
-    break;
-  }else{
-  //I have a log for invalid answers]
-    console.log(faveAnimalAnswer);
-  }
-}
+// /*
+// */
+// var faveAnimal = ['dogs', 'bears', 'beeps', 'boops', 'fish', 'piggo'];
+// var faveAnimalAnswer = prompt('What is one of my favorite animals?');
+// for( i = 0; i <= faveAnimal.length; i++){
+//   if (faveAnimal[i] === faveAnimalAnswer){
+//     console.log('answer: ' + faveAnimalAnswer + '. This answer is right');
+//     alert('Yes I like those');
+//     break;
+//   }else{
+//   //I have a log for invalid answers]
+//     console.log(faveAnimalAnswer);
+//   }
+// }
 
+//figure out answer then function it the fuck up.
+//Going to exactly clone what I did for #6, but with
+//dif variable, then start incorporating stuff
+//from q1 with picking answer from arrays. Then, wrap
+//in functions
+//need to set it to put a message when counter reaches six
+
+var faveAnimals = ['dogs', 'salem', 'bears', 'pikachu'];
+//var inputAnimal = prompt('Try to guess some of my favorite animals. One at a time, please');
+var altAnimals = ['wasps'];
+
+do {var inputAnimal = prompt('Try to guess some of my favorite animals. One at a time, please');
+  var validAnimal = false;
+  for(var j = 0; j < 4; j++){
+    if (altAnimals[j] === inputAnimal){
+      console.log(inputAnimal + 'was wrong');
+      alert('You are wrong. ' + inputAnimal + ' probably plays an important role in our ecosystem, but bees do it better');
+    } else if ((faveAnimals[j]) === inputAnimal) {
+      validAnimal = true;
+      console.log(inputAnimal + ' was right');
+      alert('you were right!');
+      break;
+    }
+  }
+  if (!validAnimal){
+    console.log(inputAnimal + ' was wrong');
+    alert('wrooonnnngggg');
+  }
+
+} while (!validAnimal);
 
