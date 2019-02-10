@@ -1,9 +1,10 @@
 body{
-    background-color: blueviolet;
+    background-color: rgb(225, 211, 238);
 }
 h1{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
+    font-size: 10 px;
     color:rgb(31, 212, 14);
 }
 
