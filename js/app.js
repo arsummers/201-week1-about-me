@@ -63,8 +63,7 @@ function questionOne() {
       console.log(questionOneInput + ' was wrong');
       alert('That was wrong. Mayo is vile.');
       break;
-    }
-    else if (i === 1) {
+    } else if (i === 1) {
       console.log(questionOneInput + ' was an invalid answer');
       alert(questionOneInput + ' was not a valid answer. Too bad you only had one shot at it');
     }
@@ -232,3 +231,29 @@ do {
 } while (!validAnimal);
 */
 
+var weirdAnimals = ['sloth bear', 'maned wolf', 'tree kangaroo'];
+var questionSevenGuesses = 6;
+var questionSevenInput = prompt('What is one of my favorite weird animals? Give answers in singular.');
+//debugger;
+
+for (var j = 0; j < questionSevenGuesses; j++){
+  if(weirdAnimals[0] === questionSevenInput.toLowerCase()){
+    console.log(questionSevenInput + ' was right');
+    alert(questionSevenInput + ' was correct! The rest of the list is ' + weirdAnimals[1] + ' and ' + weirdAnimals[2]);
+    break;
+  } else if (weirdAnimals[1] === questionSevenInput.toLowerCase()){
+    console.log(questionSevenInput + ' was right');
+    alert(questionSevenInput + ' was correct! The rest of the list is ' + weirdAnimals[0] + ' and ' + weirdAnimals[2]);
+    break;
+  } else if (weirdAnimals[2] === questionSevenInput.toLowerCase()){
+    alert(questionSevenInput + ' was correct! The rest of the list is ' + weirdAnimals[0] + ' and ' + weirdAnimals[1]);
+    break;
+  } else if (j === 5) {
+    console.log(questionSevenInput + ' was wrong');
+    alert(questionSevenInput + ' might still be a cool animal, but unfortunately, you are out of guesses. My favorites are ' + weirdAnimals[0] + ', ' + weirdAnimals[1] + ', and ' + weirdAnimals[2] + '.');
+    break;
+  } else {
+    console.log(questionSevenInput + ' was incorrect');
+    questionSevenInput = prompt(questionSevenInput + ' is probably really neat, but it didn\'t make my list. Try again');
+  }
+}
