@@ -12,7 +12,7 @@ README*/
 //prompt for question 1 of 5 y/n Qs
 //options for Yes answer
 
-function questionOne() {
+/*function questionOne() {
   var answerYes = ['YES', 'y'];
   var answerNo = ['NO', 'n'];
 
@@ -38,15 +38,40 @@ function questionOne() {
   } while (!validAnswer);
 }
 
-questionOne();
+questionOne();*/
 
-// //options for No answer
-// for(i = 0; i <= answerNo.length; i++){
-//   if (answerNo[i] === answer){
-//     console.log(answer + ' was right, plus 1 pt');
-//     alert('You are right. I hate the stuff');
-//   }
-// }
+function questionOne() {
+  var answerYes = ['yes', 'y'];
+  var answerNo = ['no', 'n'];
+
+  var questionOneGuesses = 2;
+  var questionOneInput = prompt('Have I ever willingly consumed mayonnaise?');
+  for (var i = 0; i < questionOneGuesses; i++) {
+    if (answerNo[0] === questionOneInput.toLowerCase()) {
+      console.log(questionOneInput + 'was right');
+      alert('You are right. I hate mayo');
+      break;
+    } else if (answerNo[1] === questionOneInput.toLowerCase()) {
+      console.log(questionOneInput + 'was right');
+      alert('You are right. I hate mayo');
+      break;
+    } else if (answerYes[0] === questionOneInput.toLowerCase()) {
+      console.log(questionOneInput + ' was wrong');
+      alert('That was wrong. Mayo is vile.');
+      break;
+    } else if (answerYes[1] === questionOneInput.toLowerCase()) {
+      console.log(questionOneInput + ' was wrong');
+      alert('That was wrong. Mayo is vile.');
+      break;
+    }
+    else if (i === 1) {
+      console.log(questionOneInput + ' was an invalid answer');
+      alert(questionOneInput + ' was not a valid answer. Too bad you only had one shot at it');
+    }
+  }
+}
+
+questionOne();
 
 // //prompt for question 2 of 5 y/n
 // answer = prompt('Was my first pet a cat?');
@@ -206,3 +231,4 @@ do {
   }
 } while (!validAnimal);
 */
+
