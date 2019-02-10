@@ -8,33 +8,37 @@ UPDATE
 YOUR
 README*/
 //declaring variable to use in answer field rather than strings
-var answerYes = ['YES', 'y'];
-var answerNo = ['NO', 'n'];
-
 
 //prompt for question 1 of 5 y/n Qs
 //options for Yes answer
-do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
-  var validAnswer = false;
-  for(var i = 0; i < answerYes.length; i++){
 
-    if (answerYes[i] === answer){
-      console.log('answer: ' + answer + '. This answer is wrong');
-      alert('You are wrong');
-    } else if ((answerNo[i]) === answer) {
-      validAnswer = true;
-      alert('That is correct!');
-      console.log(answer);
+function questionOne() {
+  var answerYes = ['YES', 'y'];
+  var answerNo = ['NO', 'n'];
+
+  do {
+    var answer = prompt('Have I ever willingly consumed mayonnaise?');
+    var validAnswer = false;
+    for (var i = 0; i < answerYes.length; i++) {
+      if (answerYes[i] === answer) {
+        console.log('answer: ' + answer + '. This answer is wrong');
+        alert('You are wrong');
+        break;
+      } else if (answerNo[i] === answer) {
+        validAnswer = true;
+        alert('That is correct!');
+        console.log(answer);
+      }
     }
-  }
-  // eslint-disable-next-line no-debugger
-  if (!validAnswer){
-    console.log(answer);
-    alert('Answer better');
-  }
+    // eslint-disable-next-line no-debugger
+    if (!validAnswer) {
+      console.log(answer);
+      alert('Give a clearer answer');
+    }
+  } while (!validAnswer);
+}
 
-} while (!validAnswer);
-
+questionOne();
 
 // //options for No answer
 // for(i = 0; i <= answerNo.length; i++){
@@ -125,24 +129,28 @@ do {var answer = prompt('Have I ever willingly consumed mayonnaise?');
 // }
 
 //Pick a number question. I have picked 9
-
 var pickNumber = 9;
-var guesses = 4;
+var guesses = 3;
 var pickNumberAnswer = prompt('See if you can guess the number I\'m thinking of. It is between 1 and 15');
-/*
-Why does this work?
-*/
-for(i = 0; i < guesses; i++){
-  if (pickNumberAnswer > pickNumber){
-    console.log(pickNumberAnswer + ' was too big');
-    pickNumberAnswer = prompt('Too big');
-  }else if(pickNumberAnswer < pickNumber){
-    console.log(pickNumberAnswer + ' was too small');
-    pickNumberAnswer = prompt('Too small');
-  }else if(pickNumberAnswer == pickNumber){
-    console.log(pickNumberAnswer + ' was correct');
+
+//Will move to end of entire cycle of you button mash?
+
+for (var p = 0; p < guesses; p++) {
+  if (pickNumberAnswer == pickNumber){
+    console.log(pickNumberAnswer + ' was right');
     alert('Congrats you got it');
     break;
+  }else if(p === 2){
+    console.log(pickNumberAnswer + ' was wrong. Out of tries');
+    alert(pickNumberAnswer + ' was wrong. You are out of tries. Please move on or refresh the page');
+    break;
+  }
+  else if (pickNumberAnswer > pickNumber){
+    console.log(pickNumberAnswer + ' was too big');
+    pickNumberAnswer = prompt('Too big');
+  } else if (pickNumberAnswer < pickNumber) {
+    console.log(pickNumberAnswer + ' was too small');
+    pickNumberAnswer = prompt('Too small');
   }
 }
 
@@ -169,14 +177,16 @@ for(i = 0; i < guesses; i++){
 //in functions
 //need to set it to put a message when counter reaches six
 
+/*
 var faveAnimals = ['dogs', 'salem', 'bears', 'pikachu'];
-//var inputAnimal = prompt('Try to guess some of my favorite animals. One at a time, please');
 var altAnimals = ['wasps'];
+var counter = 0;
 
-do {var inputAnimal = prompt('Try to guess some of my favorite animals. One at a time, please');
+do {
+  var inputAnimal = prompt('Try to guess some of my favorite animals. One at a time, please');
   var validAnimal = false;
-  for(var j = 0; j < 4; j++){
-    if (altAnimals[j] === inputAnimal){
+  for (var j = 0; j < 4; j++) {
+    if (altAnimals[j] === inputAnimal) {
       console.log(inputAnimal + 'was wrong');
       alert('You are wrong. ' + inputAnimal + ' probably plays an important role in our ecosystem, but bees do it better');
     } else if ((faveAnimals[j]) === inputAnimal) {
@@ -186,10 +196,13 @@ do {var inputAnimal = prompt('Try to guess some of my favorite animals. One at a
       break;
     }
   }
-  if (!validAnimal){
+  if (!validAnimal) {
     console.log(inputAnimal + ' was wrong');
     alert('wrooonnnngggg');
+    if (counter < 4) {
+      counter++;
+    }
+
   }
-
 } while (!validAnimal);
-
+*/
