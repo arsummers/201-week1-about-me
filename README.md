@@ -1,5 +1,16 @@
 # 201-week1-about-me
-My goal for this project was to let people guess things about me, using yes or no questions. I put in slightly different responses for yes/no vs 
-y/n partially for humor, partially because at the time of writing the program I didn't know how to make it accept either answer and spit out the same answer in an elegant way. I added the third option for everything that isn't a yes/no answer to give myself more code to test, and provide something more entertaining if the user doesn't want to give a real answer.
+Goal of this project was to make a page that lets the user know more about me. It links to a page with a prompt/alert style guessing game. Javascript in game page is heavily annotated with explanation about how everything works. I took extensive handwritten notes to help with debugging process.
 
-Erik Enderleine provided help with placing the .toLowerCase() function, since I was having trouble with it. I would like to learn how to make it affect the variables globally, rather than having to repeat the function for each question.
+I did a draft of this as pair programming with Merry Cimaskasky. They drove, I navigated. The code from the end of that session didn't make it into the final cut, but provided me some very valuable ideas about how to get my counters working without sending anything into an infinite loop is the input wasn't valid. 
+
+Erik Enderlein helped with placement of my .toLowerCase() method in first draft of this program. The placement stuck, allowing the user's input to be effectively case insensitive.
+
+Instructor Nicholas Carignan worked on question 1, my y/n, and question 6, my number guess in class. The drafts for both of those questions ended up buggy overnight, but they did help guide my on the right path for making my logic easier to follow at a base level, making my code easier to read, and debugging the code until it worked.
+
+I added backgrounds and borders to all of my CSS elements, since I am still in the baby steps of learning CSS and want to get a better idea of how boxes behave.
+
+Color picker: https://www.google.com/search?q=color+picker
+
+Ditto pikachu from: http://pm1.narvii.com/5864/80c3d74541e5685f105ea626cc540b4714823267_00.jpg
+
+Consulted Jon Duckett's HTML and CSS book (2011 ed.) for managing CSS borders, margins, and padding.
