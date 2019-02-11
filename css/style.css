@@ -19,6 +19,7 @@ h1{
     border: 5px outset #e0d2df;
 }
 
+/*Keeps all paragraph tags consistent*/
 p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     color: #001e33;
@@ -29,6 +30,7 @@ p{
     background-color:#e5f3fc;
 }
 
+/*for unordered list*/
 ul{
     color: #001e33;
     font-size: 20px;
@@ -38,6 +40,7 @@ ul{
     background-color: #e5f3fc;
 }
 
+/*adds border to Pikachu picture*/
 #pikachu{
     background-color: #ceb602;
     border: 5px double #ffff32;
