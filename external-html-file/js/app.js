@@ -45,7 +45,7 @@ function questionOne() {
     //the alert will pop up saying the user was right, my counter for number of right guesses will increment by 1
     //console logs the score, counter for total number of guesses increments by 1 and logs to console,
     //user breaks out of loop. If the user input doesn't match the answer, it checks to see if it matches the next else if
-    if (answerNo[0] === questionOneInput.toLowerCase()) {
+    if (questionOneInput.toLowerCase() === answerNo[0] || answerNo[1]) {
       console.log(questionOneInput + ' was right');
       alert('You are right. I hate mayo');
       counter ++;
@@ -54,37 +54,11 @@ function questionOne() {
       console.log('total guesses: ' + totalGuesses);
       break;
 
-    //if the answer the user put in matches my answerNo array at the index of [1], the console will log,
-    //the alert will pop up saying the user was right, my counter for number of right guesses will increment by 1
-    //console logs the score, counter for total number of guesses increments by 1 and logs to console,
-    //user breaks out of loop. If the user input doesn't match the answer, it checks to see if it matches the next else if
-    } else if (answerNo[1] === questionOneInput.toLowerCase()) {
-      console.log(questionOneInput + ' was right');
-      alert('You are right. I hate mayo');
-      counter++;
-      console.log('score: '+ counter);
-      totalGuesses++;
-      console.log('total guesses: ' + totalGuesses);
-      break;
-
     //if the answer the user put in matches my answerYes array at the index of [0], the console will log,
     //the alert will pop up saying the user was wrong, my counter for number of wrong guesses will increment by 1
     //console logs the number wrong, counter for total number of guesses increments by 1 and logs to console,
     //user breaks out of loop. If the user input doesn't match the answer, it checks to see if it matches the next else if
-    } else if (answerYes[0] === questionOneInput.toLowerCase()) {
-      console.log(questionOneInput + ' was wrong');
-      alert('That was wrong. Mayo is vile.');
-      wrongGuessNumber++;
-      console.log('wrong guesses: ' + wrongGuessNumber);
-      totalGuesses++;
-      console.log('total guesses: ' + totalGuesses);
-      break;
-
-    //if the answer the user put in matches my answerYes array at the index of [1], the console will log,
-    //the alert will pop up saying the user was wrong, my counter for number of wrong guesses will increment by 1
-    //console logs the number wrong, counter for total number of guesses increments by 1 and logs to console,
-    //user breaks out of loop. If the user input doesn't match the answer, it checks to see if it matches the next else if
-    } else if (answerYes[1] === questionOneInput.toLowerCase()) {
+    } else if (questionOneInput.toLowerCase() === answerYes[0] || answerYes[1]) {
       console.log(questionOneInput + ' was wrong');
       alert('That was wrong. Mayo is vile.');
       wrongGuessNumber++;
@@ -112,6 +86,7 @@ function questionOne() {
 }
 //calls question 1
 questionOne();
+
 
 //Question 2, yes/no
 function questionTwo(){
@@ -324,6 +299,7 @@ function questionFive(){
 //calls question 5
 questionFive();
 
+
 //question 6, higher lower number guess. I have picked 4.
 function questionSix() {
   //number to check against
@@ -389,6 +365,7 @@ function questionSix() {
 }
 //calls question 6
 questionSix();
+
 
 //Start of question 7, which gives an array of animals to guess, and only
 //6 chances to guess one of them. If the user gets it wrong on the 6th try,
