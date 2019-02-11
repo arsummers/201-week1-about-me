@@ -2,43 +2,80 @@ body{
     background-color: rgb(225, 211, 238);
 }
 h1{
+    background-color: #414f66;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
     font-size: 10 px;
-    color:rgb(31, 212, 14);
+    color: #cab5ce;
+    margin: 5px 500px 50px 300px ;
+    padding: 20px;
+    border: 5px solid #687270;
+}
+#gamelink{
+    background-color:#a717c4;
+    color: #b0fcec;
+    margin: 10 px;
+    padding: 5px;
+    border: 5px outset #e0d2df;
 }
 
 p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    color: #001e33;
+    font-size: 20px;
+    border: 5px ridge #ae00ff;
+    margin: 10px 1100px 10px 10px;
+    padding: 10px;
+    background-color:#e5f3fc;
 }
 
+ul{
+    color: #001e33;
+    font-size: 20px;
+    border: 5px ridge #ae00ff;
+    margin: 10px 300px 10px 10px;
+    padding: 30px;
+    background-color: #e5f3fc;
+}
 
-
+#pikachu{
+    background-color: #ceb602;
+    border: 5px double #ffff32;
+    margin: 10px 300px 10px 10px;
+    padding: 5px;
+}
+/*I can't add margins or mess with the box width without messing up the code below*/
 ol{
-    background-color: lightcyan;
-    border-width: 10px;
+    background-color: #3e465b;
+    border: 15px groove #e2e2e2;
 }
 
 /*links to items for water pokemon*/
 .water{
-    background-color: blue;
-    color:white;
+    color: #d6dbfc;
     font-size: 20px;
-    margin: 5%;
+    border: 5px ridge #003fed;
+    margin: 10px 1100px 10px 10px;
+    padding: 10px;
+    background-color: #0398a5;
 }
 
 /*links to items for fire pokemon*/
 .fire{
-    background-color:red;
-    color: rgb(159, 193, 199);
-    font-size: 30px;
-    margin: 5%;
+    background-color:#f2311f;
+    color: #f9b077;
+    font-size: 20px;
+    border: 5px ridge #a51003;
+    margin: 10px 1100px 10px 10px;
+    padding: 10px;
 }
 
 /*links to items for grass pokemon*/
 .grass{
-    background-color: greenyellow;
-    color: rgb(20, 100, 200);
-    font-size: 40px;
-    margin: 5%;
+    background-color: #00cc11;
+    color: #adffb4;
+    font-size: 20px;
+    border: 5px ridge #015608;
+    margin: 10px 1100px 10px 10px;
+    padding: 10px;
 }
